@@ -6,14 +6,20 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import styles from './CategoryCard.Style';
 
-const CategoryCard = ({category}) => {
+const CategoryCard = ({item}) => {
+  const navigation = useNavigation();
+
+  const onPress = () => {
+    navigation.navigate('food-page', {strCategory: item.strCategory});
+  };
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
-        <Image style={styles.image} source={{uri: category.strCategoryThumb}} />
-        <Text style={styles.title}>{category.strCategory}</Text>
+        <Image style={styles.image} source={{uri: item.strCategoryThumb}} />
+        <Text style={styles.title}>{item.strCategory}</Text>
       </View>
     </TouchableWithoutFeedback>
   );

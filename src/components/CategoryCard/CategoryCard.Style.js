@@ -16,13 +16,20 @@ export default StyleSheet.create({
   image: {
     // width: 100,
     width: Dimensions.get('window').width / 4,
-    minHeight: 100,
+    // minHeight: 100,
+    height: 75,
     resizeMode: 'contain',
+    backgroundColor: '#F6F6F6',
   },
-  title: {},
+  title: {
+    marginLeft: 5,
+    fontWeight: '700',
+    color: '#8785A2',
+    fontSize: 18,
+  },
 });
 
-/*TODO: style this page 
+/*TODO: style this page
 
 https://colorhunt.co/palette/ffc7c7ffe2e2f6f6f68785a2 => colorHunt pallette
 
