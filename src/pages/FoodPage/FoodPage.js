@@ -12,13 +12,8 @@ const FoodPage = props => {
   const {strCategory} = props.route.params;
   const {data, loading, error} = useFetch(`${Config.API_FOOD}${strCategory}`);
 
-  const HandleDetail = idMeal => {
-    props.navigation.navigate('DetailPage', {idMeal});
-  };
   //render food list
-  const renderItem = ({item}) => (
-    <FoodCard meal={item} onPress={() => HandleDetail(item.idMeal)} />
-  );
+  const renderItem = ({item}) => <FoodCard meal={item} />;
 
   if (loading) {
     return <LoadingAnimation />;

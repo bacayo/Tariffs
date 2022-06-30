@@ -13,7 +13,7 @@ const CategoryCard = ({item}) => {
   const navigation = useNavigation();
 
   const onPress = () => {
-    navigation.navigate('food-page', {strCategory: item.strCategory});
+    navigation.navigate('food-screen', {strCategory: item.strCategory});
   };
   return (
     <TouchableWithoutFeedback onPress={onPress}>

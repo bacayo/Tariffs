@@ -5,6 +5,7 @@ import CategoryPage from './pages/CategoryPage/CategoryPage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import FoodPage from './pages/FoodPage/FoodPage';
 import strings from './utils/strings';
+
 const Router = () => {
   const Stack = createNativeStackNavigator();
 
@@ -22,22 +23,22 @@ const Router = () => {
           component={CategoryPage}
         />
         <Stack.Screen
-          options={{
+          options={({route}) => ({
+            headerTitle: route.params.strCategory,
             headerStyle: {backgroundColor: '#F6F6F6'},
-            headerTitle: 'Meals',
-            headerTitleAlign: 'center',
             headerTintColor: '#8785A2',
-          }}
+            headerTitleAlign: 'center',
+          })}
           name="food-screen"
           component={FoodPage}
         />
         <Stack.Screen
-          options={{
-            headerStyle: {backgroundColor: '#F6F6F6'},
-            headerTitle: 'Detail',
-            headerTitleAlign: 'center',
+          options={({route}) => ({
+            headerTitle: route.params.strMeal,
             headerTintColor: '#8785A2',
-          }}
+            headerTitleAlign: 'center',
+            headerStyle: {backgroundColor: '#F6F6F6'},
+          })}
           name="detail-screen"
           component={DetailPage}
         />
