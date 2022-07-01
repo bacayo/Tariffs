@@ -6,9 +6,16 @@ import DetailPage from './pages/DetailPage/DetailPage';
 import FoodPage from './pages/FoodPage/FoodPage';
 import strings from './utils/strings';
 import colors from './utils/colors';
+import RNBootSplash from 'react-native-bootsplash';
 
 const Router = () => {
   const Stack = createNativeStackNavigator();
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      RNBootSplash.hide();
+    }, 1000);
+  }, []);
 
   return (
     <NavigationContainer>

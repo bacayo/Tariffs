@@ -1,7 +1,7 @@
 package com.tariffs;
 import android.os.Bundle;
 
-
+import com.zoontek.rnbootsplash.RNBootSplash;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -19,7 +19,9 @@ public class MainActivity extends ReactActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);
+    
 }
+
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
    * you can specify the renderer you wish to use - the new renderer (Fabric) or the old renderer
@@ -31,6 +33,13 @@ public class MainActivity extends ReactActivity {
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {
+    
+    @Override
+    protected void loadApp(String appKey) {
+      RNBootSplash.init(getPlainActivity()); // <- initialize the splash screen
+      super.loadApp(appKey);
+    }
+
     public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
       super(activity, mainComponentName);
     }
