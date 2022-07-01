@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../utils/colors';
 
 export default StyleSheet.create({
   container: {},
@@ -8,17 +9,17 @@ export default StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#8785A2',
+    color: colors.title_color,
     margin: 5,
   },
   area: {
     fontSize: 18,
-    color: '#8785A2',
+    color: colors.title_color,
     margin: 5,
     fontWeight: '400 ',
   },
   line: {
-    borderColor: '#8785A2',
+    borderColor: colors.border_color,
     borderBottomWidth: 1,
     marginBottom: 5,
     marginTop: 5,
@@ -27,7 +28,7 @@ export default StyleSheet.create({
     margin: 5,
   },
   descPara: {
-    color: 'black',
+    color: colors.p_color,
     fontSize: 18,
   },
   tubeContainer: {

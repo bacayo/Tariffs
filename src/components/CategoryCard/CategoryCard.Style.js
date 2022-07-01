@@ -1,9 +1,10 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import colors from '../../utils/colors';
 
 export default StyleSheet.create({
   container: {
     borderWidth: 2,
-    borderColor: '#8785A2',
+    borderColor: colors.border_color,
     margin: 10,
     padding: 5,
     flexDirection: 'row',
@@ -11,7 +12,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderTopLeftRadius: 20,
     borderBottomLeftRadius: 20,
-    backgroundColor: '#F6F6F6',
+    backgroundColor: colors.card_background_color,
   },
   image: {
     // width: 100,
@@ -19,12 +20,12 @@ export default StyleSheet.create({
     // minHeight: 100,
     height: 75,
     resizeMode: 'contain',
-    backgroundColor: '#F6F6F6',
+    backgroundColor: colors.card_background_color,
   },
   title: {
     marginLeft: 5,
     fontWeight: '700',
-    color: '#8785A2',
+    color: colors.title_color,
     fontSize: 18,
   },
 });

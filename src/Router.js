@@ -5,6 +5,7 @@ import CategoryPage from './pages/CategoryPage/CategoryPage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import FoodPage from './pages/FoodPage/FoodPage';
 import strings from './utils/strings';
+import colors from './utils/colors';
 
 const Router = () => {
   const Stack = createNativeStackNavigator();
@@ -14,19 +15,19 @@ const Router = () => {
       <Stack.Navigator>
         <Stack.Screen
           options={{
-            headerStyle: {backgroundColor: '#F6F6F6'},
+            headerTintColor: colors.header_tint_color,
+            headerStyle: {backgroundColor: colors.header_background_color},
             headerTitle: strings.food_categories,
             headerTitleAlign: 'center',
-            headerTintColor: '#8785A2',
           }}
           name="category-screen"
           component={CategoryPage}
         />
         <Stack.Screen
           options={({route}) => ({
+            headerTintColor: colors.header_tint_color,
+            headerStyle: {backgroundColor: colors.header_background_color},
             headerTitle: route.params.strCategory,
-            headerStyle: {backgroundColor: '#F6F6F6'},
-            headerTintColor: '#8785A2',
             headerTitleAlign: 'center',
           })}
           name="food-screen"
@@ -34,10 +35,10 @@ const Router = () => {
         />
         <Stack.Screen
           options={({route}) => ({
+            headerTintColor: colors.header_tint_color,
+            headerStyle: {backgroundColor: colors.header_background_color},
             headerTitle: route.params.strMeal,
-            headerTintColor: '#8785A2',
             headerTitleAlign: 'center',
-            headerStyle: {backgroundColor: '#F6F6F6'},
           })}
           name="detail-screen"
           component={DetailPage}

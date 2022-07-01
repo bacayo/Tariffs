@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../utils/colors';
 
 export default StyleSheet.create({
   container: {
@@ -11,7 +12,7 @@ export default StyleSheet.create({
     bottom: 0,
     padding: 10,
     width: '100%',
-    backgroundColor: '#FFE2E2',
+    backgroundColor: colors.screen_background_color,
     opacity: 0.7,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
@@ -23,6 +24,6 @@ export default StyleSheet.create({
   title: {
     fontSize: 16,
     textAlign: 'right',
-    color: '#222831',
+    color: colors.meal_title_color,
   },
 });
